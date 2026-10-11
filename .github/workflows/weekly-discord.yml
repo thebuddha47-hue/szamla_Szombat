@@ -31,7 +31,7 @@ jobs:
             echo "should_send=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_send=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping scheduled send outside Sunday 08:00-08:15 Europe/Budapest."
+            echo "Skipping scheduled send outside Saturday 10:00-10:15 Europe/Budapest."
           fi
 
       - name: Send Discord message
