@@ -2,9 +2,12 @@ name: Weekly Discord notification
 
 on:
   schedule:
-    # 08:00 Europe/Budapest is 06:00 UTC in summer and 07:00 UTC in winter.
-    - cron: '0 6 * * 0'
-    - cron: '0 7 * * 0'
+    # Szombat 10:00 magyar nyári idő szerint
+    - cron: '0 8 * * 6'
+
+    # Szombat 10:00 magyar téli idő szerint
+    - cron: '0 9 * * 6'
+
   workflow_dispatch:
 
 permissions:
