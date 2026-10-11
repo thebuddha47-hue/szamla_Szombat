@@ -15,7 +15,7 @@ message = config.get('message', '').strip()
 if not message:
     raise SystemExit('config.json message must not be empty.')
 
-content = '<@794633661294706709>\n' + message
+content = '<@&794633661294706709>\n' + message
 if len(content) > 2000:
     raise SystemExit('Discord message exceeds 2000 characters.')
 
