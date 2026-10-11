@@ -15,11 +15,16 @@ message = config.get('message', '').strip()
 if not message:
     raise SystemExit('config.json message must not be empty.')
 
-content = '@everyone\n' + message
+content = '<@794633661294706709>\n' + message
 if len(content) > 2000:
     raise SystemExit('Discord message exceeds 2000 characters.')
 
-payload = {'content': content, 'allowed_mentions': {'parse': ['everyone']}}
+payload = {
+    'content': content,
+    'allowed_mentions': {
+        'parse': ['roles']
+    }
+}
 image_name = config.get('image_file', '').strip()
 image_path = ROOT / 'assets' / image_name if image_name else None
 
